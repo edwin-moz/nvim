@@ -13,15 +13,13 @@ return require('packer').startup(function(use)
     }
 
     use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
+        "catppuccin/nvim",
+        as = "catppuccin",
         config = function()
-            require('rose-pine').setup({
-                dark_variant = "dawn",
-                variant = 'dawn',
-                dim_inactive_windows = false,
+            require("catppuccin").setup({
+                flavour = "mocha"
             })
-            vim.cmd('colorscheme rose-pine')
+            vim.cmd("colorscheme catppuccin")
         end
     })
 
